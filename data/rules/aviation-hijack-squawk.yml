@@ -1,0 +1,12 @@
+title: Aircraft squawking the unlawful-interference (hijack) code
+id: orion-air-0001
+status: stable
+description: Transponder code 7500 is reserved for reporting unlawful interference (hijacking) under ICAO Annex 2.
+logsource: { category: orion-air }
+detection:
+  selection: { squawk: '7500' }
+  condition: selection
+level: critical
+tags: [orion.safety.aviation]
+falsepositives: [Transponder misconfiguration or accidental code entry]
+references: ['https://www.icao.int/Pages/default.aspx']

@@ -1,0 +1,11 @@
+title: Known Exploited Vulnerability with confirmed ransomware use
+id: orion-vuln-0001
+status: stable
+description: CISA KEV entries flagged knownRansomwareCampaignUse=Known.
+logsource: { category: orion-vuln }
+detection:
+  selection: { kev: true, ransomware: 'Known' }
+  condition: selection
+level: critical
+tags: [attack.t1486, attack.t1190]
+references: ['https://www.cisa.gov/known-exploited-vulnerabilities-catalog']

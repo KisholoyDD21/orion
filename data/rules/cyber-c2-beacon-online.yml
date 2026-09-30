@@ -1,0 +1,11 @@
+title: Botnet command-and-control endpoint currently online
+id: orion-cyber-0001
+status: stable
+description: abuse.ch Feodo Tracker reports this indicator as currently reachable.
+logsource: { category: orion-cyber }
+detection:
+  selection: { status: online }
+  condition: selection
+level: high
+tags: [attack.t1071.001, attack.t1571]
+references: ['https://feodotracker.abuse.ch/']

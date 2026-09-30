@@ -1,0 +1,12 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Install dependencies", "type": "shell", "command": "npm install", "problemMatcher": [] },
+    { "label": "Run (live)", "type": "shell", "command": "npm start", "isBackground": true, "problemMatcher": [], "group": { "kind": "build", "isDefault": true } },
+    { "label": "Run (offline / synthetic)", "type": "shell", "command": "npm run dev", "isBackground": true, "problemMatcher": [] },
+    { "label": "Syntax check", "type": "shell", "command": "npm run check", "problemMatcher": [] },
+    { "label": "Unit tests", "type": "shell", "command": "npm run unit", "problemMatcher": [] },
+    { "label": "Smoke test (server must be running)", "type": "shell", "command": "npm run smoke", "problemMatcher": [] },
+    { "label": "Rebuild reference data", "type": "shell", "command": "npm run build:reference-data", "problemMatcher": [] }
+  ]
+}

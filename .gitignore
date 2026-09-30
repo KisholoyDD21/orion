@@ -1,0 +1,8 @@
+node_modules/
+.env
+data/cache/*
+!data/cache/.gitkeep
+data/cases/*
+!data/cases/.gitkeep
+*.log
+.DS_Store

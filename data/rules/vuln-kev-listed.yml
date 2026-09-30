@@ -1,0 +1,11 @@
+title: Vulnerability listed in the CISA Known Exploited Vulnerabilities catalog
+id: orion-vuln-0002
+status: stable
+description: KEV listing means CISA has evidence of active exploitation in the wild.
+logsource: { category: orion-vuln }
+detection:
+  selection: { kev: true }
+  ransomware: { ransomware: 'Known' }
+  condition: selection and not ransomware
+level: high
+tags: [attack.t1190]

@@ -1,0 +1,10 @@
+title: AIS-SART / MOB / EPIRB distress beacon active
+id: orion-mar-0001
+status: stable
+description: AIS navigational status 14 is reserved for active search-and-rescue transponders and man-overboard beacons.
+logsource: { category: orion-maritime }
+detection:
+  selection: { navStat: 14 }
+  condition: selection
+level: critical
+tags: [orion.safety.maritime]

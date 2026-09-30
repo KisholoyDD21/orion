@@ -1,0 +1,10 @@
+title: Critical-severity CVE (CVSS >= 9) not yet in the KEV catalog
+id: orion-vuln-0003
+status: experimental
+description: High severity does not imply active exploitation; see EPSS enrichment on the entity for an exploitation-probability estimate.
+logsource: { category: orion-vuln }
+detection:
+  selection: { cvss|gte: 9.0, kev: false }
+  condition: selection
+level: medium
+tags: [attack.t1190]

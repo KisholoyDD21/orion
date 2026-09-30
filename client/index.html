@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#05080b">
+<meta name="color-scheme" content="dark">
+<title>ORION Intelligence Fabric</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/vendor/cesium/Widgets/widgets.css">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/panels.css">
+</head>
+<body class="app-shell" data-mode="loading">
+<noscript>ORION requires JavaScript.</noscript>
+
+<header id="topbar">
+  <button id="btn-menu" class="hud-btn" style="display:none;" title="Layers &amp; sources" aria-label="Toggle layer dock">☰</button>
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">◈</span>
+    <span class="brand-name">ORION</span>
+    <span class="brand-sub">Intelligence Fabric</span>
+  </div>
+  <div class="topbar-search">
+    <input id="search-input" type="text" placeholder="Search places, callsigns, MMSI, NORAD ID, CVE…" autocomplete="off" spellcheck="false">
+    <div id="search-results" class="search-results" hidden role="listbox"></div>
+  </div>
+  <div class="topbar-status">
+    <button id="btn-alerts" class="pill pill-button" data-band="routine" title="Alerts">
+      <span class="pill-dot" aria-hidden="true"></span><span id="alert-count">0</span> alerts
+    </button>
+    <span id="mode-badge" class="pill" title="Data mode">connecting…</span>
+    <span id="clock" class="mono clock" title="UTC time">--:--:--Z</span>
+  </div>
+</header>
+
+<nav id="dock-left">
+  <section class="dock-section">
+    <h2>Layers</h2>
+    <ul id="layer-list" class="layer-list"></ul>
+    <label class="field-row">
+      <span>Min. priority <b id="min-priority-val">0</b></span>
+      <input id="min-priority" type="range" min="0" max="80" value="0" step="5">
+    </label>
+    <label class="switch-row">
+      <input id="toggle-synthetic" type="checkbox" checked>
+      <span>Show synthetic entities</span>
+    </label>
+  </section>
+  <section class="dock-section dock-section-grow">
+    <h2>Sources</h2>
+    <ul id="source-list" class="source-list"></ul>
+  </section>
+</nav>
+
+<main id="globe-container">
+  <div id="cesium-viewer"></div>
+  <div id="globe-hud" class="globe-hud">
+    <button id="hud-home" class="hud-btn" title="Reset view">⌂</button>
+    <button id="hud-terminator" class="hud-btn hud-btn-toggle" title="Day / night terminator" aria-pressed="true">☾</button>
+    <button id="hud-imagery" class="hud-btn hud-btn-toggle" title="Live NASA GIBS imagery overlay" aria-pressed="true">◑</button>
+  </div>
+  <div id="credit-container" class="credit-container"></div>
+</main>
+
+<aside id="dock-right">
+  <div id="tab-rail" class="tab-rail" role="tablist"></div>
+  <div id="panel-host" class="panel-host"></div>
+</aside>
+
+<div id="toast-host" class="toast-host" aria-live="polite"></div>
+
+<script src="/vendor/cesium/Cesium.js"></script>
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

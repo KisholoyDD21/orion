@@ -1,0 +1,11 @@
+title: Aircraft squawking a general or radio-failure emergency code
+id: orion-air-0002
+status: stable
+description: 7700 (general emergency) and 7600 (radio failure) are ICAO emergency transponder codes.
+logsource: { category: orion-air }
+detection:
+  selection: { squawk: ['7700', '7600'] }
+  condition: selection
+level: high
+tags: [orion.safety.aviation]
+falsepositives: [Precautionary squawk during training or minor system faults]

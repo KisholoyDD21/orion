@@ -1,0 +1,87 @@
+{
+  "generatedBy": "scripts/build-reference-data.mjs",
+  "datasets": {
+    "countries-110m": {
+      "name": "Natural Earth admin-0 countries 110m",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+      "license": "Public domain (Natural Earth)",
+      "upstreamBytes": 838726,
+      "upstreamSha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+      "rows": 177,
+      "output": "data/reference/countries-110m.geo.json",
+      "outputBytes": 182085,
+      "outputSha256": "aa7ccdaeeea0d3cdb24c888f129d4935e7ad424ce2745bd83df3045c374e0310",
+      "builtAt": "2026-09-23T18:17:25.090Z"
+    },
+    "country-centroids": {
+      "name": "Country label points (from Natural Earth 110m)",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_admin_0_countries.geojson",
+      "license": "Public domain (Natural Earth)",
+      "rows": 175,
+      "output": "data/reference/country-centroids.json",
+      "outputBytes": 10003,
+      "outputSha256": "fba9a52231e4b6e24b98dfc0882c1493fbbf7cefe870ba046568c5a3b1248e85",
+      "builtAt": "2026-09-23T18:17:25.091Z"
+    },
+    "countries-50m": {
+      "name": "Natural Earth admin-0 countries 50m",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson",
+      "license": "Public domain (Natural Earth)",
+      "upstreamBytes": 3083490,
+      "upstreamSha256": "3e458fc036ad0a66411f2c1e6cac49c5d7bfb81cb1123bc513b22511a2b7fdeb",
+      "rows": 242,
+      "output": "data/reference/countries-50m.geo.json",
+      "outputBytes": 1485682,
+      "outputSha256": "3bdde5c639973b1afce400d03b2a47372acab6bcbc90d9b4aec9cb41c6bca7ac",
+      "builtAt": "2026-09-23T18:17:25.383Z"
+    },
+    "places-50m": {
+      "name": "Natural Earth populated places 50m (simple)",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_populated_places_simple.geojson",
+      "license": "Public domain (Natural Earth)",
+      "upstreamBytes": 850767,
+      "upstreamSha256": "8e70756b39fae9bcdc1e332bfc510c024c5edd3a13203ffd20092ee37b61d978",
+      "rows": 1251,
+      "output": "data/reference/places-50m.json",
+      "outputBytes": 51926,
+      "outputSha256": "929273635d4e489f67024aa4052698a49e33c160e661aa4ed497ebc65139fef4",
+      "builtAt": "2026-09-23T18:17:25.581Z"
+    },
+    "airports": {
+      "name": "OurAirports (large + scheduled medium)",
+      "url": "https://raw.githubusercontent.com/davidmegginson/ourairports-data/main/airports.csv",
+      "license": "Public domain (OurAirports)",
+      "upstreamBytes": 12728855,
+      "upstreamSha256": "afee98cc969c6564a76807bee54859e0727b7b4e68421c0ab05967cd0c5a76ea",
+      "rows": 3291,
+      "output": "data/reference/airports.json",
+      "outputBytes": 272050,
+      "outputSha256": "015fef241d2a132489bc188fda70ce247c1d2a65442a739d7ef9d15cc2be7b21",
+      "builtAt": "2026-09-23T18:17:27.624Z"
+    },
+    "power-plants": {
+      "name": "WRI Global Power Plant Database (nuclear + >=1.5 GW)",
+      "url": "https://raw.githubusercontent.com/wri/global-power-plant-database/master/output_database/global_power_plant_database.csv",
+      "license": "CC BY 4.0 (World Resources Institute)",
+      "upstreamBytes": 11973385,
+      "upstreamSha256": "4b1f93e0fd93664f18684d9b05d0a52ed9658c6a8cf0d21ff2520791379ba7fc",
+      "rows": 870,
+      "output": "data/reference/power-plants.json",
+      "outputBytes": 56949,
+      "outputSha256": "03edb720c7b8df4926e95fc3e8c15101d5da2d5c3a44778e091eb594829cce92",
+      "builtAt": "2026-09-23T18:17:29.227Z"
+    },
+    "attack-enterprise": {
+      "name": "MITRE ATT&CK Enterprise (compact)",
+      "url": "https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack.json",
+      "license": "MITRE ATT&CK terms of use (royalty-free, attribution)",
+      "upstreamBytes": 53835637,
+      "upstreamSha256": "dc1639caa5501d720e280cf1cbd8fbe009884a0c9b3e6e9ed9d0c25166c3d8f4",
+      "rows": 697,
+      "output": "data/attack/enterprise-attack.compact.json",
+      "outputBytes": 92128,
+      "outputSha256": "0b63e8081124d98ec5d25ea60951e865ff5bd21fa241b8a793afb5a4d16109bb",
+      "builtAt": "2026-09-23T18:22:07.480Z"
+    }
+  }
+}

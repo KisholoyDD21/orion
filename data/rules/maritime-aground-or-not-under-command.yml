@@ -1,0 +1,11 @@
+title: Vessel reporting aground or not under command
+id: orion-mar-0002
+status: stable
+description: AIS navigational status 6 (aground) or 2 (not under command).
+logsource: { category: orion-maritime }
+detection:
+  selection: { navStat: [2, 6] }
+  condition: selection
+level: high
+tags: [orion.safety.maritime]
+falsepositives: [AIS transponder misconfiguration; a vessel intentionally moored that misreports status]

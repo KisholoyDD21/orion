@@ -1,0 +1,11 @@
+title: Significant earthquake within 150 km of a nuclear power plant
+id: orion-seis-0002
+status: experimental
+description: Proximity uses the WRI Global Power Plant Database; this is a triage aid, not a safety assessment.
+logsource: { category: orion-seismic }
+detection:
+  significant: { mag|gte: 5.0 }
+  nearNuke: { _nearNuclearKm|lte: 150 }
+  condition: significant and nearNuke
+level: high
+tags: [orion.hazard.seismic, orion.infrastructure]

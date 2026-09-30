@@ -1,0 +1,12 @@
+title: Major earthquake with tsunami flag set
+id: orion-seis-0001
+status: stable
+description: USGS sets the tsunami flag when an event meets its automated tsunami-generation screening criteria.
+logsource: { category: orion-seismic }
+detection:
+  major: { mag|gte: 6.5 }
+  tsunami: { tsunami: true }
+  condition: major and tsunami
+level: critical
+tags: [orion.hazard.seismic]
+references: ['https://earthquake.usgs.gov/data/comcat/']

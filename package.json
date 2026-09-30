@@ -1,0 +1,23 @@
+{
+  "name": "orion-intelligence-fabric",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Research-grade open-source intelligence and cyber fusion workstation: a real Cesium globe, live public OSINT feeds, an explainable multi-factor fusion engine, Sigma-style detection, STIX/TAXII export, and an ACH workbench.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "ORION_MODE=offline LOG_LEVEL=debug node server/index.js",
+    "check": "node scripts/check-syntax.mjs",
+    "unit": "node --test test/shared.test.js",
+    "smoke": "node scripts/smoke-test.mjs",
+    "test": "npm run check && npm run unit && npm run smoke",
+    "build:reference-data": "node scripts/build-reference-data.mjs"
+  },
+  "dependencies": {
+    "cesium": "^1.145.0",
+    "satellite.js": "^7.1.0"
+  }
+}

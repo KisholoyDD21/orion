@@ -1,0 +1,15 @@
+title: Military-tagged aircraft near a nuclear plant or major airport
+id: orion-air-0003
+status: experimental
+description: >
+  Uses ORION's fusion-derived proximity fields (computed from Natural Earth / WRI / OurAirports reference data),
+  not a raw source field. Proximity alone is routine near many airports; this rule is a triage aid, not a finding.
+logsource: { category: orion-air }
+detection:
+  mil: { subtype: mil }
+  nearNuke: { _nearNuclearKm|lte: 150 }
+  nearAirport: { _nearAirportKm|lte: 60 }
+  condition: mil and (nearNuke or nearAirport)
+level: high
+tags: [orion.safety.aviation, orion.infrastructure]
+falsepositives: [Scheduled military transport or exercises near shared-use airports]

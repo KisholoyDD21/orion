@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ORION: Run (live)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/index.js",
+      "env": { "LOG_LEVEL": "info" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "ORION: Run (offline / synthetic)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/server/index.js",
+      "env": { "ORION_MODE": "offline", "LOG_LEVEL": "debug" },
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "ORION: Attach to running server",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

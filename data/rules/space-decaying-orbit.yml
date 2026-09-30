@@ -1,0 +1,10 @@
+title: Tracked object in a low, decaying orbit
+id: orion-space-0001
+status: experimental
+description: A perigee below 200 km typically indicates atmospheric drag will cause re-entry within days to weeks.
+logsource: { category: orion-space }
+detection:
+  selection: { perigeeKm|lt: 200 }
+  condition: selection
+level: low
+tags: [orion.space.reentry]

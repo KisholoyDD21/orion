@@ -1,0 +1,10 @@
+title: Media attention spike on conflict-related keywords
+id: orion-media-0001
+status: experimental
+description: GDELT mention count in a 24 h window; place is where the keywords are mentioned, not a verified event location.
+logsource: { category: orion-media }
+detection:
+  selection: { theme: conflict, count|gte: 40 }
+  condition: selection
+level: medium
+tags: [orion.media]

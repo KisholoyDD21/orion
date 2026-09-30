@@ -1,0 +1,18 @@
+services:
+  orion:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      HOST: "0.0.0.0"
+      PORT: "8787"
+      ORION_MODE: "live"       # set to "offline" to run entirely on the synthetic scenario, no outbound calls
+      LOG_LEVEL: "info"
+      # NVD_API_KEY:
+      # OPENSKY_CLIENT_ID:
+      # OPENSKY_CLIENT_SECRET:
+      # CESIUM_ION_TOKEN:
+    volumes:
+      - orion-cache:/app/data/cache
+volumes:
+  orion-cache:

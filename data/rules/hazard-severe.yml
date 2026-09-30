@@ -1,0 +1,11 @@
+title: Severe natural hazard event (volcano, or high-intensity storm)
+id: orion-haz-0001
+status: stable
+description: NASA EONET category is "volcanoes", or a "severeStorms" event whose reported intensity is at least 100 kt.
+logsource: { category: orion-hazard }
+detection:
+  volcano: { category: volcanoes }
+  bigStorm: { category: severeStorms, magnitude|gte: 100 }
+  condition: volcano or bigStorm
+level: high
+tags: [orion.hazard.natural]
